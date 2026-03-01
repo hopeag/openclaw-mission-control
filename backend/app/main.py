@@ -13,6 +13,7 @@ from fastapi_pagination import add_pagination
 from app.api.activity import router as activity_router
 from app.api.agent import router as agent_router
 from app.api.agent_markdown import router as agent_markdown_router
+from app.api.agent_vault import router as agent_vault_router
 from app.api.agents import router as agents_router
 from app.api.approvals import router as approvals_router
 from app.api.auth import router as auth_router
@@ -536,6 +537,7 @@ api_v1 = APIRouter(prefix="/api/v1")
 api_v1.include_router(auth_router)
 api_v1.include_router(agent_router)
 api_v1.include_router(agent_markdown_router)
+api_v1.include_router(agent_vault_router)
 api_v1.include_router(agents_router)
 api_v1.include_router(activity_router)
 api_v1.include_router(gateway_router)
